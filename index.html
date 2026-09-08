@@ -1,13 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
@@ -16,7 +14,6 @@
 
   <meta name="theme-color" content="#234536">
 
-  <!-- Open Graph -->
   <meta
     property="og:title"
     content="Antonio & Natalia — Nuestra Boda"
@@ -27,17 +24,11 @@
     content="¡Nos casamos! Acompáñanos el 28 de noviembre de 2026."
   >
 
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:locale"
-    content="es_ES"
-  >
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
 
   <title>Antonio & Natalia — Nuestra Boda</title>
+
 
   <style>
 
@@ -112,27 +103,14 @@
 
     .hero {
       min-height: 100svh;
-
       position: relative;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       text-align: center;
-
       padding: 50px 20px 70px;
-
       overflow: hidden;
-
       color: var(--blanco);
-
-      /*
-        IMPORTANTE:
-        hero-boda.jpeg debe estar en la misma carpeta
-        que index.html.
-      */
-
       background-color: var(--verde-pino);
 
       background-image:
@@ -150,15 +128,10 @@
     .hero::before,
     .hero::after {
       content: "✦";
-
       position: absolute;
-
       color: var(--dorado);
-
       font-size: 3rem;
-
       opacity: .75;
-
       pointer-events: none;
     }
 
@@ -174,9 +147,7 @@
 
     .hero-content {
       max-width: 850px;
-
       position: relative;
-
       z-index: 1;
 
       animation:
@@ -185,13 +156,9 @@
 
     .hero .small-title {
       font-size: 1rem;
-
       letter-spacing: 6px;
-
       text-transform: uppercase;
-
       color: var(--dorado-claro);
-
       margin-bottom: 25px;
     }
 
@@ -200,25 +167,19 @@
         clamp(3.5rem, 11vw, 8rem);
 
       font-weight: normal;
-
       line-height: 1;
-
       margin-bottom: 25px;
     }
 
     .hero .date {
       font-size: 1.35rem;
-
       letter-spacing: 4px;
     }
 
     .hero .verse {
       margin: 30px auto 0;
-
       max-width: 650px;
-
       font-style: italic;
-
       font-size: 1.1rem;
     }
 
@@ -233,23 +194,14 @@
 
     .button {
       display: inline-block;
-
       margin-top: 35px;
-
       padding: 15px 40px;
-
       background: var(--rojo);
-
       color: var(--blanco);
-
       text-decoration: none;
-
       border-radius: 30px;
-
       font-family: Arial, sans-serif;
-
       font-size: 1rem;
-
       letter-spacing: .5px;
 
       transition:
@@ -264,7 +216,6 @@
     .button:hover,
     .button:focus {
       background: var(--dorado);
-
       transform: translateY(-3px);
 
       box-shadow:
@@ -282,46 +233,33 @@
 
     section {
       max-width: var(--max-width);
-
       margin: auto;
-
       padding: 90px 25px;
-
       text-align: center;
     }
 
     section h2 {
       color: var(--verde-pino);
-
       font-size:
         clamp(2.2rem, 5vw, 2.8rem);
 
       font-weight: normal;
-
       margin-bottom: 25px;
     }
 
     section h2::after {
       content: "";
-
       display: block;
-
       width: 60px;
-
       height: 2px;
-
       background: var(--rojo);
-
       margin: 18px auto 0;
     }
 
     .intro {
       max-width: 700px;
-
       margin: auto;
-
       font-size: 1.2rem;
-
       color: #555b52;
     }
 
@@ -332,11 +270,8 @@
 
     .ornament {
       color: var(--rojo);
-
       font-size: 1.5rem;
-
       letter-spacing: 8px;
-
       margin: 25px 0;
     }
 
@@ -347,12 +282,10 @@
 
     .date-card {
       max-width: 620px;
-
       margin:
         40px auto 60px;
 
       padding: 32px;
-
       background: var(--blanco);
 
       border-top:
@@ -366,23 +299,16 @@
 
     .date-label {
       display: block;
-
       color: var(--verde-salvia);
-
       font-family: Arial, sans-serif;
-
       font-size: .85rem;
-
       text-transform: uppercase;
-
       letter-spacing: 4px;
-
       margin-bottom: 10px;
     }
 
     .big-date {
       color: var(--verde-pino);
-
       font-size:
         clamp(2rem, 6vw, 3.2rem);
 
@@ -391,24 +317,20 @@
 
     .date-card p {
       color: #666;
-
       margin-top: 5px;
     }
 
 
     /* =========================================================
        CUENTA ATRÁS
-       DÍAS · HORAS · MINUTOS
     ========================================================= */
 
     .countdown {
       max-width: 700px;
-
       margin:
         0 auto 60px;
 
       display: grid;
-
       grid-template-columns:
         repeat(3, 1fr);
 
@@ -430,23 +352,16 @@
 
     .countdown-number {
       display: block;
-
       color: var(--verde-pino);
-
       font-size: 2rem;
-
       line-height: 1.2;
     }
 
     .countdown-label {
       color: var(--verde-salvia);
-
       font-family: Arial, sans-serif;
-
       font-size: .72rem;
-
       text-transform: uppercase;
-
       letter-spacing: 2px;
     }
 
@@ -457,7 +372,6 @@
 
     .places {
       display: grid;
-
       grid-template-columns:
         repeat(2, 1fr);
 
@@ -466,11 +380,8 @@
 
     .place-card {
       background: var(--blanco);
-
       border-radius: var(--radio);
-
       overflow: hidden;
-
       box-shadow: var(--sombra);
 
       transition:
@@ -480,35 +391,25 @@
 
     .place-card:hover {
       transform: translateY(-5px);
-
       box-shadow: var(--sombra-hover);
     }
 
     .place-image {
       width: 100%;
-
       height: 270px;
-
       overflow: hidden;
-
       background: var(--verde-claro);
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
     }
 
     .place-image img {
       width: 100%;
-
       height: 100%;
-
       object-fit: contain;
-
       display: block;
-
       background: #f8f8f5;
 
       transition:
@@ -526,67 +427,48 @@
 
     .place-icon {
       color: var(--dorado);
-
       font-size: 1.4rem;
-
       margin-bottom: 8px;
     }
 
     .place-content h3 {
       color: var(--verde-pino);
-
       font-size: 1.8rem;
-
       font-weight: normal;
-
       margin-bottom: 10px;
     }
 
     .place-name {
       color: var(--rojo);
-
       font-size: 1.15rem;
-
       font-weight: bold;
-
       margin-bottom: 4px;
     }
 
     .place-time {
       color: var(--verde-salvia);
-
       font-size: 1.1rem;
-
       font-weight: bold;
-
       margin-bottom: 4px;
     }
 
     .place-location {
       color: var(--verde-pino);
-
       font-size: 1rem;
-
       font-weight: bold;
-
       margin-bottom: 15px;
     }
 
     .place-description {
       color: #666;
-
       font-size: .98rem;
-
       max-width: 450px;
-
       margin: auto;
     }
 
     .place-button {
       display: inline-block;
-
       margin-top: 20px;
-
       padding:
         10px 22px;
 
@@ -594,13 +476,9 @@
         1px solid var(--verde-pino);
 
       border-radius: 25px;
-
       color: var(--verde-pino);
-
       text-decoration: none;
-
       font-family: Arial, sans-serif;
-
       font-size: .85rem;
 
       transition:
@@ -611,7 +489,6 @@
     .place-button:hover,
     .place-button:focus {
       background: var(--verde-pino);
-
       color: var(--blanco);
     }
 
@@ -635,7 +512,6 @@
 
     .rsvp-content {
       max-width: 700px;
-
       margin: auto;
     }
 
@@ -647,10 +523,373 @@
       background: var(--dorado);
     }
 
-    .rsvp p {
+    .rsvp-intro {
       color: #F3F0E8;
-
       font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+
+    /* =========================================================
+       AVISO FAMILIA
+    ========================================================= */
+
+    .family-notice {
+      max-width: 620px;
+      margin:
+        0 auto 35px;
+
+      padding:
+        15px 20px;
+
+      background:
+        rgba(201, 154, 69, .12);
+
+      border:
+        1px solid rgba(241, 212, 154, .35);
+
+      border-radius: 8px;
+      color: #F3F0E8;
+      font-family: Arial, sans-serif;
+      font-size: .9rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .family-notice strong {
+      color: var(--dorado-claro);
+      font-size: .98rem;
+    }
+
+
+    /* =========================================================
+       FORMULARIO
+    ========================================================= */
+
+    .rsvp-form {
+      text-align: left;
+      margin-top: 35px;
+
+      background:
+        rgba(255, 255, 255, .08);
+
+      padding: 35px;
+      border-radius: var(--radio);
+
+      border:
+        1px solid rgba(255, 255, 255, .18);
+
+      box-shadow:
+        0 10px 35px rgba(0, 0, 0, .12);
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group.hidden {
+      display: none;
+    }
+
+    .form-label {
+      display: block;
+      color: var(--dorado-claro);
+      font-family: Arial, sans-serif;
+      font-size: .9rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .form-help {
+      display: block;
+      color: rgba(255, 255, 255, .72);
+      font-family: Arial, sans-serif;
+      font-size: .8rem;
+      margin-top: 6px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding:
+        13px 15px;
+
+      border:
+        1px solid rgba(255, 255, 255, .25);
+
+      border-radius: 8px;
+
+      background:
+        rgba(255, 255, 255, .95);
+
+      color: var(--texto);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 1rem;
+      outline: none;
+
+      transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--dorado);
+
+      box-shadow:
+        0 0 0 3px rgba(201, 154, 69, .22);
+    }
+
+    .form-textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+
+    /* =========================================================
+       RADIOS
+    ========================================================= */
+
+    .radio-options {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .radio-option {
+      flex: 1;
+      min-width: 120px;
+      position: relative;
+    }
+
+    .radio-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .radio-option label {
+      display: block;
+      padding:
+        13px 15px;
+
+      text-align: center;
+
+      border:
+        1px solid rgba(255, 255, 255, .25);
+
+      border-radius: 8px;
+
+      background:
+        rgba(255, 255, 255, .07);
+
+      color: var(--blanco);
+
+      font-family: Arial, sans-serif;
+
+      cursor: pointer;
+
+      transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease;
+    }
+
+    .radio-option label:hover {
+      border-color: var(--dorado);
+    }
+
+    .radio-option input:checked + label {
+      background: var(--rojo);
+      border-color: var(--rojo);
+      color: var(--blanco);
+    }
+
+
+    /* =========================================================
+       ACOMPAÑANTES
+    ========================================================= */
+
+    .companions-section {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .companion-list {
+      margin-top: 15px;
+    }
+
+    .companion-row {
+      margin-bottom: 12px;
+    }
+
+    .companion-row label {
+      display: block;
+      color: rgba(255, 255, 255, .8);
+      font-family: Arial, sans-serif;
+      font-size: .8rem;
+      margin-bottom: 5px;
+    }
+
+
+    /* =========================================================
+       AUTOBÚS
+    ========================================================= */
+
+    .bus-options {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .bus-row {
+      background:
+        rgba(255, 255, 255, .06);
+
+      border:
+        1px solid rgba(255, 255, 255, .16);
+
+      border-radius: 8px;
+      padding: 15px;
+    }
+
+    .bus-route {
+      color: var(--blanco);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .bus-route small {
+      display: block;
+      color: rgba(255, 255, 255, .7);
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: normal;
+      margin-top: 2px;
+    }
+
+    .bus-choice {
+      display: flex;
+      gap: 10px;
+    }
+
+    .bus-choice label {
+      flex: 1;
+      text-align: center;
+      padding:
+        9px;
+
+      border:
+        1px solid rgba(255, 255, 255, .2);
+
+      border-radius: 6px;
+      font-family: Arial, sans-serif;
+      font-size: .85rem;
+      cursor: pointer;
+
+      transition:
+        background .2s ease,
+        border-color .2s ease;
+    }
+
+    .bus-choice input {
+      display: none;
+    }
+
+    .bus-choice input:checked + label {
+      background: var(--rojo);
+      border-color: var(--rojo);
+    }
+
+
+    /* =========================================================
+       CANCIÓN
+    ========================================================= */
+
+    .song-input-wrapper {
+      position: relative;
+    }
+
+    .song-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+
+      transform:
+        translateY(-50%);
+
+      color: var(--dorado);
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+
+    .song-input {
+      padding-left: 42px;
+    }
+
+
+    /* =========================================================
+       BOTÓN FORMULARIO
+    ========================================================= */
+
+    .form-submit-wrapper {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .form-submit {
+      border: none;
+      cursor: pointer;
+      margin-top: 0;
+      min-width: 220px;
+    }
+
+    .form-submit:disabled {
+      opacity: .7;
+      cursor: wait;
+      transform: none;
+    }
+
+    .form-success {
+      display: none;
+      margin-top: 25px;
+      padding: 18px;
+
+      background:
+        rgba(201, 154, 69, .15);
+
+      border:
+        1px solid rgba(241, 212, 154, .45);
+
+      border-radius: 8px;
+      color: var(--dorado-claro);
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    .form-error {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+
+      background:
+        rgba(184, 58, 58, .2);
+
+      border:
+        1px solid rgba(241, 212, 154, .35);
+
+      border-radius: 8px;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: .9rem;
     }
 
 
@@ -672,9 +911,7 @@
 
     footer p:first-child {
       color: var(--dorado-claro);
-
       font-size: 1.1rem;
-
       margin-bottom: 8px;
     }
 
@@ -689,7 +926,6 @@
 
     .reveal {
       opacity: 0;
-
       transform:
         translateY(25px);
 
@@ -700,25 +936,24 @@
 
     .reveal.visible {
       opacity: 1;
-
       transform:
         translateY(0);
     }
 
     @keyframes heroAppear {
+
       from {
         opacity: 0;
-
         transform:
           translateY(20px);
       }
 
       to {
         opacity: 1;
-
         transform:
           translateY(0);
       }
+
     }
 
 
@@ -751,13 +986,11 @@
 
       .hero .small-title {
         font-size: .8rem;
-
         letter-spacing: 3px;
       }
 
       .hero .date {
         font-size: 1.05rem;
-
         letter-spacing: 2px;
       }
 
@@ -793,7 +1026,6 @@
 
       .countdown-label {
         font-size: .6rem;
-
         letter-spacing: 1px;
       }
 
@@ -812,12 +1044,34 @@
 
       .button {
         width: 100%;
-
         max-width: 330px;
-
         padding:
           14px 25px;
       }
+
+      .rsvp-form {
+        padding:
+          25px 18px;
+      }
+
+      .radio-options {
+        flex-direction: column;
+      }
+
+      .radio-option {
+        min-width: 100%;
+      }
+
+      .bus-choice {
+        gap: 8px;
+      }
+
+      .family-notice {
+        font-size: .85rem;
+        padding:
+          14px 15px;
+      }
+
     }
 
 
@@ -843,9 +1097,11 @@
         transition-duration:
           .01ms !important;
       }
+
     }
 
   </style>
+
 </head>
 
 
@@ -887,9 +1143,7 @@
 
       <a
         class="button"
-        href="https://forms.gle/wZW9RxuMaiVBR4R29"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#rsvp"
       >
         Confirmar asistencia
       </a>
@@ -944,8 +1198,6 @@
     </h2>
 
 
-    <!-- FECHA -->
-
     <div class="date-card">
 
       <span class="date-label">
@@ -963,9 +1215,7 @@
     </div>
 
 
-    <!-- =====================================================
-         CUENTA ATRÁS
-    ====================================================== -->
+    <!-- CUENTA ATRÁS -->
 
     <div
       class="countdown"
@@ -1022,9 +1272,7 @@
     </div>
 
 
-    <!-- =====================================================
-         LUGARES
-    ====================================================== -->
+    <!-- LUGARES -->
 
     <div
       class="places"
@@ -1180,21 +1428,445 @@
         ¿Vienes?
       </h2>
 
-      <p>
+      <p class="rsvp-intro">
         Por favor, confirma tu asistencia rellenando
         nuestro formulario.
         Así podremos preparar todo con mucho cariño
         para este día tan especial.
       </p>
 
-      <a
-        class="button"
-        href="https://forms.gle/wZW9RxuMaiVBR4R29"
-        target="_blank"
-        rel="noopener noreferrer"
+
+      <!-- AVISO FAMILIAS -->
+
+      <div class="family-notice">
+
+        <strong>
+          Una confirmación por familia, por favor.
+        </strong>
+
+        <br>
+
+        Si sois varios miembros de la misma familia,
+        solo es necesario que una persona complete
+        el formulario indicando los nombres de todos
+        los que asistiréis.
+
+      </div>
+
+
+      <!-- FORMULARIO -->
+
+      <form
+        class="rsvp-form"
+        id="rsvpForm"
+        action="https://script.google.com/macros/s/AKfycbzA2zi8IA1-A_TS1uPrSPW2JbjFN1xH-bfzz3ta9sxW2YglXSQekqeUUNCXTUY2X2ZwCw/exec"
+        method="POST"
+        target="google-script-frame"
       >
-        Ir al formulario
-      </a>
+
+
+        <!-- NOMBRE -->
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="nombre"
+          >
+            Nombre y apellidos *
+          </label>
+
+          <input
+            class="form-input"
+            type="text"
+            id="nombre"
+            name="nombre"
+            autocomplete="name"
+            required
+          >
+
+        </div>
+
+
+        <!-- ASISTENCIA -->
+
+        <div class="form-group">
+
+          <span class="form-label">
+            ¿Asistirás a nuestra boda? *
+          </span>
+
+          <div class="radio-options">
+
+            <div class="radio-option">
+
+              <input
+                type="radio"
+                id="asiste-si"
+                name="asistencia"
+                value="Sí"
+                required
+              >
+
+              <label for="asiste-si">
+                Sí, allí estaré ❤️
+              </label>
+
+            </div>
+
+
+            <div class="radio-option">
+
+              <input
+                type="radio"
+                id="asiste-no"
+                name="asistencia"
+                value="No"
+              >
+
+              <label for="asiste-no">
+                No podré asistir
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CAMPOS SOLO SI ASISTE -->
+
+        <div
+          class="companions-section"
+          id="companionsSection"
+        >
+
+
+          <!-- ACOMPAÑANTES -->
+
+          <div class="form-group">
+
+            <label
+              class="form-label"
+              for="numAcompanantes"
+            >
+              ¿Cuántas personas más vendrán contigo?
+            </label>
+
+            <select
+              class="form-select"
+              id="numAcompanantes"
+              name="acompanantes"
+            >
+
+              <option value="0">
+                Ninguna
+              </option>
+
+              <option value="1">
+                1 persona
+              </option>
+
+              <option value="2">
+                2 personas
+              </option>
+
+              <option value="3">
+                3 personas
+              </option>
+
+              <option value="4">
+                4 personas
+              </option>
+
+              <option value="5">
+                5 personas
+              </option>
+
+            </select>
+
+            <span class="form-help">
+              Si sois varios miembros de la familia,
+              incluye aquí los nombres de todos los que asistiréis.
+            </span>
+
+          </div>
+
+
+          <div
+            class="companion-list"
+            id="companionList"
+          ></div>
+
+        </div>
+
+
+        <!-- ALERGIAS -->
+
+        <div
+          class="form-group attendance-extra"
+          id="allergiesGroup"
+        >
+
+          <label
+            class="form-label"
+            for="alergias"
+          >
+            ¿Tienes alguna alergia o intolerancia alimentaria?
+          </label>
+
+          <textarea
+            class="form-textarea"
+            id="alergias"
+            name="alergias"
+            placeholder="Indícanos cualquier alergia o intolerancia que debamos tener en cuenta."
+          ></textarea>
+
+        </div>
+
+
+        <!-- AUTOBÚS -->
+
+        <div
+          class="form-group attendance-extra"
+          id="busGroup"
+        >
+
+          <span class="form-label">
+            Autobús
+          </span>
+
+          <span class="form-help">
+            Si finalmente hay autobús, ¿te gustaría utilizarlo?
+          </span>
+
+
+          <div class="bus-options">
+
+
+            <!-- IDA -->
+
+            <div class="bus-row">
+
+              <div class="bus-route">
+
+                Fuensalida → Maqueda
+
+                <small>
+                  Ida hacia el lugar de celebración
+                </small>
+
+              </div>
+
+
+              <div class="bus-choice">
+
+                <div>
+
+                  <input
+                    type="radio"
+                    id="bus-ida-si"
+                    name="busIda"
+                    value="Sí"
+                  >
+
+                  <label for="bus-ida-si">
+                    Sí
+                  </label>
+
+                </div>
+
+
+                <div>
+
+                  <input
+                    type="radio"
+                    id="bus-ida-no"
+                    name="busIda"
+                    value="No"
+                    checked
+                  >
+
+                  <label for="bus-ida-no">
+                    No
+                  </label>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- VUELTA -->
+
+            <div class="bus-row">
+
+              <div class="bus-route">
+
+                Maqueda → Fuensalida
+
+                <small>
+                  Vuelta después de la celebración
+                </small>
+
+              </div>
+
+
+              <div class="bus-choice">
+
+                <div>
+
+                  <input
+                    type="radio"
+                    id="bus-vuelta-si"
+                    name="busVuelta"
+                    value="Sí"
+                  >
+
+                  <label for="bus-vuelta-si">
+                    Sí
+                  </label>
+
+                </div>
+
+
+                <div>
+
+                  <input
+                    type="radio"
+                    id="bus-vuelta-no"
+                    name="busVuelta"
+                    value="No"
+                    checked
+                  >
+
+                  <label for="bus-vuelta-no">
+                    No
+                  </label>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CANCIÓN -->
+
+        <div
+          class="form-group attendance-extra"
+          id="songGroup"
+        >
+
+          <label
+            class="form-label"
+            for="cancion"
+          >
+            🎵 ¿Qué canción te gustaría escuchar?
+          </label>
+
+          <span class="form-help">
+            Puede ser una canción que te encante,
+            que te recuerde a nosotros o que quieras bailar.
+          </span>
+
+
+          <div class="song-input-wrapper">
+
+            <span
+              class="song-icon"
+              aria-hidden="true"
+            >
+              ♪
+            </span>
+
+            <input
+              class="form-input song-input"
+              type="text"
+              id="cancion"
+              name="cancion"
+              placeholder="Nombre de la canción y artista"
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- CAMPO OCULTO CON NOMBRES -->
+
+        <input
+          type="hidden"
+          id="nombresAcompanantes"
+          name="nombresAcompanantes"
+          value=""
+        >
+
+
+        <!-- BOTÓN -->
+
+        <div class="form-submit-wrapper">
+
+          <button
+            class="button form-submit"
+            type="submit"
+            id="submitButton"
+          >
+            Confirmar asistencia
+          </button>
+
+        </div>
+
+
+        <!-- ÉXITO -->
+
+        <div
+          class="form-success"
+          id="formSuccess"
+          role="status"
+          aria-live="polite"
+        >
+
+          ¡Gracias! ❤️ Hemos recibido tu confirmación.
+
+          <br>
+
+          Nos hace muchísima ilusión contar contigo.
+
+        </div>
+
+
+        <!-- ERROR -->
+
+        <div
+          class="form-error"
+          id="formError"
+          role="alert"
+          aria-live="assertive"
+        >
+
+          Ha ocurrido un problema al enviar el formulario.
+          Por favor, inténtalo de nuevo.
+
+        </div>
+
+      </form>
+
+
+      <!-- IFRAME OCULTO -->
+
+      <iframe
+        name="google-script-frame"
+        id="google-script-frame"
+        title="Envío del formulario"
+        style="display:none;"
+      ></iframe>
 
     </div>
 
@@ -1226,7 +1898,6 @@
 
     /* ========================================================
        CUENTA ATRÁS
-       DÍAS · HORAS · MINUTOS
     ======================================================== */
 
     const weddingDate =
@@ -1243,11 +1914,6 @@
         now.getTime();
 
 
-      /*
-        Cuando llega el día de la boda,
-        mostramos 0 en todos los campos.
-      */
-
       if (difference <= 0) {
 
         document.getElementById("days").textContent =
@@ -1263,17 +1929,10 @@
       }
 
 
-      const second =
-        1000;
-
-      const minute =
-        second * 60;
-
-      const hour =
-        minute * 60;
-
-      const day =
-        hour * 24;
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
 
 
       const days =
@@ -1302,15 +1961,12 @@
 
       document.getElementById("minutes").textContent =
         minutes;
+
     }
 
 
     updateCountdown();
 
-
-    /*
-      Actualizamos cada minuto.
-    */
 
     setInterval(
       updateCountdown,
@@ -1328,6 +1984,7 @@
 
     const observer =
       new IntersectionObserver(
+
         (entries) => {
 
           entries.forEach(
@@ -1344,15 +2001,18 @@
                 observer.unobserve(
                   entry.target
                 );
+
               }
 
             }
           );
 
         },
+
         {
           threshold: 0.12
         }
+
       );
 
 
@@ -1366,7 +2026,480 @@
       }
     );
 
+
+    /* ========================================================
+       ELEMENTOS DEL FORMULARIO
+    ======================================================== */
+
+    const form =
+      document.getElementById(
+        "rsvpForm"
+      );
+
+
+    const companionsSection =
+      document.getElementById(
+        "companionsSection"
+      );
+
+
+    const companionList =
+      document.getElementById(
+        "companionList"
+      );
+
+
+    const numAcompanantes =
+      document.getElementById(
+        "numAcompanantes"
+      );
+
+
+    const nombresAcompanantes =
+      document.getElementById(
+        "nombresAcompanantes"
+      );
+
+
+    const allergiesGroup =
+      document.getElementById(
+        "allergiesGroup"
+      );
+
+
+    const busGroup =
+      document.getElementById(
+        "busGroup"
+      );
+
+
+    const songGroup =
+      document.getElementById(
+        "songGroup"
+      );
+
+
+    const alergias =
+      document.getElementById(
+        "alergias"
+      );
+
+
+    const cancion =
+      document.getElementById(
+        "cancion"
+      );
+
+
+    const submitButton =
+      document.getElementById(
+        "submitButton"
+      );
+
+
+    const formSuccess =
+      document.getElementById(
+        "formSuccess"
+      );
+
+
+    const formError =
+      document.getElementById(
+        "formError"
+      );
+
+
+    const responseFrame =
+      document.getElementById(
+        "google-script-frame"
+      );
+
+
+    let formSubmitted =
+      false;
+
+
+    /* ========================================================
+       MOSTRAR CAMPOS DE ASISTENCIA
+    ======================================================== */
+
+    function showAttendanceFields() {
+
+      companionsSection.style.display =
+        "block";
+
+      allergiesGroup.style.display =
+        "block";
+
+      busGroup.style.display =
+        "block";
+
+      songGroup.style.display =
+        "block";
+
+    }
+
+
+    /* ========================================================
+       LIMPIAR CAMPOS DE ASISTENCIA
+    ======================================================== */
+
+    function clearAttendanceFields() {
+
+      companionList.innerHTML =
+        "";
+
+      numAcompanantes.value =
+        "0";
+
+      nombresAcompanantes.value =
+        "";
+
+      alergias.value =
+        "";
+
+      cancion.value =
+        "";
+
+
+      const busIdaNo =
+        document.getElementById(
+          "bus-ida-no"
+        );
+
+
+      const busVueltaNo =
+        document.getElementById(
+          "bus-vuelta-no"
+        );
+
+
+      if (busIdaNo) {
+
+        busIdaNo.checked =
+          true;
+
+      }
+
+
+      if (busVueltaNo) {
+
+        busVueltaNo.checked =
+          true;
+
+      }
+
+    }
+
+
+    /* ========================================================
+       OCULTAR CAMPOS DE ASISTENCIA
+    ======================================================== */
+
+    function hideAttendanceFields() {
+
+      companionsSection.style.display =
+        "none";
+
+      allergiesGroup.style.display =
+        "none";
+
+      busGroup.style.display =
+        "none";
+
+      songGroup.style.display =
+        "none";
+
+      clearAttendanceFields();
+
+    }
+
+
+    /* ========================================================
+       CAMBIO DE ASISTENCIA
+    ======================================================== */
+
+    function updateAttendanceFields() {
+
+      const selected =
+        document.querySelector(
+          'input[name="asistencia"]:checked'
+        );
+
+
+      if (
+        selected &&
+        selected.value === "Sí"
+      ) {
+
+        showAttendanceFields();
+
+      } else {
+
+        hideAttendanceFields();
+
+      }
+
+    }
+
+
+    const asistenciaInputs =
+      document.querySelectorAll(
+        'input[name="asistencia"]'
+      );
+
+
+    asistenciaInputs.forEach(
+      (input) => {
+
+        input.addEventListener(
+          "change",
+          updateAttendanceFields
+        );
+
+      }
+    );
+
+
+    /* ========================================================
+       CREAR CAMPOS DE ACOMPAÑANTES
+    ======================================================== */
+
+    function updateCompanions() {
+
+      const number =
+        parseInt(
+          numAcompanantes.value,
+          10
+        ) || 0;
+
+
+      companionList.innerHTML =
+        "";
+
+
+      for (
+        let i = 1;
+        i <= number;
+        i++
+      ) {
+
+        const row =
+          document.createElement(
+            "div"
+          );
+
+
+        row.className =
+          "companion-row";
+
+
+        const label =
+          document.createElement(
+            "label"
+          );
+
+
+        label.setAttribute(
+          "for",
+          `acompanante-${i}`
+        );
+
+
+        label.textContent =
+          `Nombre y apellidos de la persona ${i}`;
+
+
+        const input =
+          document.createElement(
+            "input"
+          );
+
+
+        input.className =
+          "form-input";
+
+        input.type =
+          "text";
+
+        input.id =
+          `acompanante-${i}`;
+
+        input.name =
+          `acompanante${i}`;
+
+        input.placeholder =
+          "Nombre y apellidos";
+
+        input.required =
+          true;
+
+
+        row.appendChild(
+          label
+        );
+
+        row.appendChild(
+          input
+        );
+
+
+        companionList.appendChild(
+          row
+        );
+
+      }
+
+    }
+
+
+    numAcompanantes.addEventListener(
+      "change",
+      updateCompanions
+    );
+
+
+    /* ========================================================
+       PREPARAR NOMBRES DE ACOMPAÑANTES
+    ======================================================== */
+
+    function prepareCompanionNames() {
+
+      const inputs =
+        companionList.querySelectorAll(
+          'input[name^="acompanante"]'
+        );
+
+
+      const names = [];
+
+
+      inputs.forEach(
+        (input) => {
+
+          const name =
+            input.value.trim();
+
+
+          if (name) {
+
+            names.push(name);
+
+          }
+
+        }
+      );
+
+
+      nombresAcompanantes.value =
+        names.join(", ");
+
+    }
+
+
+    /* ========================================================
+       ESTADO INICIAL
+    ======================================================== */
+
+    hideAttendanceFields();
+
+
+    /* ========================================================
+       ENVÍO DEL FORMULARIO
+    ======================================================== */
+
+    form.addEventListener(
+      "submit",
+      function() {
+
+        prepareCompanionNames();
+
+
+        formSubmitted =
+          true;
+
+
+        submitButton.disabled =
+          true;
+
+
+        submitButton.textContent =
+          "Enviando…";
+
+
+        formError.style.display =
+          "none";
+
+
+        formSuccess.style.display =
+          "none";
+
+      }
+    );
+
+
+    /* ========================================================
+       RESPUESTA DEL APPS SCRIPT
+    ======================================================== */
+
+    responseFrame.addEventListener(
+      "load",
+      function() {
+
+        if (!formSubmitted) {
+          return;
+        }
+
+
+        setTimeout(
+          function() {
+
+            /*
+             * OCULTAMOS COMPLETAMENTE EL FORMULARIO.
+             *
+             * El mensaje de éxito está dentro del formulario,
+             * por eso primero lo mostramos y después ocultamos
+             * el resto de campos.
+             */
+
+            form.style.display =
+              "none";
+
+
+            formSuccess.style.display =
+              "block";
+
+
+            /*
+             * Como formSuccess está dentro del formulario,
+             * lo movemos temporalmente fuera del formulario
+             * para que pueda seguir siendo visible.
+             */
+
+            form.parentNode.insertBefore(
+              formSuccess,
+              form
+            );
+
+
+            formSuccess.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+
+
+            formSubmitted =
+              false;
+
+          },
+          300
+        );
+
+      }
+    );
+
   </script>
 
 </body>
+
 </html>
