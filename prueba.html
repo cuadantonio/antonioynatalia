@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucía & Carlos — Nuestra Boda</title>
+
+  <style>
+    :root {
+      --verde-pino: #234536;
+      --verde-salvia: #71866B;
+      --verde-claro: #DDE5D8;
+      --rojo: #B83A3A;
+      --rojo-oscuro: #8E2929;
+      --crema: #F8F4EA;
+      --dorado: #C99A45;
+      --texto: #2E302B;
+      --blanco: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--texto);
+      background: var(--crema);
+      line-height: 1.7;
+    }
+
+    /* PORTADA */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+      overflow: hidden;
+      color: white;
+
+      background:
+        linear-gradient(rgba(35,69,54,.82), rgba(35,69,54,.82)),
+        url("WhatsApp Image 2026-09-07 at 15.48.15.jpeg") center / cover;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "✦";
+      position: absolute;
+      color: var(--dorado);
+      font-size: 3rem;
+      opacity: .75;
+    }
+
+    .hero::before {
+      top: 35px;
+      left: 45px;
+    }
+
+    .hero::after {
+      bottom: 35px;
+      right: 45px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero .small-title {
+      font-size: 1rem;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #F1D49A;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 11vw, 8rem);
+      font-weight: normal;
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .hero .date {
+      font-size: 1.35rem;
+      letter-spacing: 4px;
+    }
+
+    .hero .verse {
+      margin: 30px auto 0;
+      max-width: 650px;
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+
+    /* BOTONES */
+    .button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 15px 40px;
+      background: var(--rojo);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      letter-spacing: .5px;
+      transition: .3s;
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    }
+
+    .button:hover {
+      background: var(--dorado);
+      transform: translateY(-3px);
+    }
+
+    /* SECCIONES */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 25px;
+      text-align: center;
+    }
+
+    section h2 {
+      color: var(--verde-pino);
+      font-size: 2.8rem;
+      font-weight: normal;
+      margin-bottom: 25px;
+    }
+
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: var(--rojo);
+      margin: 18px auto 0;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.2rem;
+      color: #555b52;
+    }
+
+    /* FECHA */
+    .date-card {
+      max-width: 620px;
+      margin: 40px auto 60px;
+      padding: 32px;
+      background: white;
+      border-top: 5px solid var(--rojo);
+      border-bottom: 1px solid #d8c49a;
+      box-shadow: 0 8px 25px rgba(35,69,54,.10);
+    }
+
+    .date-label {
+      display: block;
+      color: var(--verde-salvia);
+      font-family: Arial, sans-serif;
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    .big-date {
+      color: var(--verde-pino);
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      letter-spacing: 4px;
+    }
+
+    .date-card p {
+      color: #666;
+      margin-top: 5px;
+    }
+
+    /* IGLESIA Y CELEBRACIÓN */
+    .places {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px;
+    }
+
+    .place-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(35,69,54,.12);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .place-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(35,69,54,.18);
+    }
+
+    .place-image {
+      width: 100%;
+      height: 270px;
+      overflow: hidden;
+      background: var(--verde-claro);
+    }
+
+    .place-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #f8f8f5;
+    }
+
+    .place-content {
+      padding: 30px 30px 35px;
+    }
+
+    .place-icon {
+      color: var(--dorado);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .place-content h3 {
+      color: var(--verde-pino);
+      font-size: 1.8rem;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .place-name {
+      color: var(--rojo);
+      font-size: 1.15rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .place-time {
+      color: var(--verde-salvia);
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .place-location {
+      color: var(--verde-pino);
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .place-description {
+      color: #666;
+      font-size: .98rem;
+      max-width: 450px;
+      margin: auto;
+    }
+
+    /* RSVP */
+    .rsvp {
+      max-width: none;
+      background:
+        linear-gradient(135deg, var(--verde-pino), #315B47);
+      color: white;
+    }
+
+    .rsvp-content {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .rsvp h2 {
+      color: white;
+    }
+
+    .rsvp h2::after {
+      background: var(--dorado);
+    }
+
+    .rsvp p {
+      color: #F3F0E8;
+      font-size: 1.1rem;
+    }
+
+    /* DECORACIÓN */
+    .ornament {
+      color: var(--rojo);
+      font-size: 1.5rem;
+      letter-spacing: 8px;
+      margin: 25px 0;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 45px 20px;
+      text-align: center;
+      background: #192F25;
+      color: white;
+    }
+
+    footer p:first-child {
+      color: #F1D49A;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    footer p:last-child {
+      opacity: .8;
+    }
+
+    /* MÓVIL */
+    @media (max-width: 700px) {
+      section {
+        padding: 65px 20px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+      }
+
+      .hero .small-title {
+        font-size: .8rem;
+        letter-spacing: 3px;
+      }
+
+      .hero .date {
+        font-size: 1.05rem;
+        letter-spacing: 2px;
+      }
+
+      .places {
+        grid-template-columns: 1fr;
+      }
+
+      .place-image {
+        height: 230px;
+      }
+
+      .place-content {
+        padding: 25px 20px 30px;
+      }
+
+      .hero::before,
+      .hero::after {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA -->
+  <header class="hero">
+    <div class="hero-content">
+
+      <div class="small-title">Nos casamos</div>
+
+      <h1>Lucía & Carlos</h1>
+
+      <div class="date">
+        12 · Junio · 2027
+      </div>
+
+      <div class="verse">
+        “Tu bondad y tu misericordia me acompañan
+        todos los días de mi vida.”
+        <br>
+        <strong>(Salmo 23, 6)</strong>
+      </div>
+
+      <!-- CAMBIA ESTA URL POR LA DE TU FORMULARIO -->
+      <a
+        class="button"
+        href="https://docs.google.com/forms/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Confirmar asistencia
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- INTRODUCCIÓN -->
+  <section>
+
+    <div class="ornament">❧ ✦ ❧</div>
+
+    <h2>¡Queremos celebrarlo contigo!</h2>
+
+    <p class="intro">
+      Después de tantos momentos compartidos, ha llegado el momento
+      de dar un nuevo paso juntos. Nos haría muchísima ilusión contar
+      contigo en este día tan especial.
+    </p>
+
+  </section>
+
+
+  <!-- EL GRAN DÍA -->
+  <section class="wedding-day">
+
+    <h2>El gran día</h2>
+
+    <!-- PRIMERO LA FECHA -->
+    <div class="date-card">
+
+      <span class="date-label">Nuestra boda</span>
+
+      <div class="big-date">
+        12 · 06 · 2027
+      </div>
+
+      <p>
+        Sábado, 12 de junio de 2027
+      </p>
+
+    </div>
+
+
+    <!-- DEBAJO: IGLESIA Y CELEBRACIÓN -->
+    <div class="places">
+
+      <!-- IGLESIA -->
+      <div class="place-card">
+
+        <div class="place-image">
+          <img src="invitación boda(1).png" alt="Iglesia de la ceremonia">
+        </div>
+
+        <div class="place-content">
+
+          <div class="place-icon">✦</div>
+
+          <h3>La ceremonia</h3>
+
+          <p class="place-name">
+            Iglesia de Santa María
+          </p>
+
+          <p class="place-time">
+            17:00 h
+          </p>
+
+          <p class="place-location">
+            Localidad
+          </p>
+
+          <p class="place-description">
+            Nos encontraremos aquí para compartir
+            uno de los momentos más especiales
+            de nuestro día.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- CELEBRACIÓN -->
+      <div class="place-card">
+
+        <div class="place-image">
+          <img src="invitación boda(1).png" alt="Lugar de la celebración">
+        </div>
+
+        <div class="place-content">
+
+          <div class="place-icon">✦</div>
+
+          <h3>La celebración</h3>
+
+          <p class="place-name">
+            Finca Los Olivos
+          </p>
+
+          <p class="place-time">
+            19:00 h
+          </p>
+
+          <p class="place-location">
+            Localidad
+          </p>
+
+          <p class="place-description">
+            Después de la ceremonia nos trasladaremos
+            a la finca para celebrar juntos,
+            brindar y disfrutar de la fiesta.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONFIRMACIÓN -->
+  <section class="rsvp">
+
+    <div class="rsvp-content">
+
+      <div class="ornament" style="color:#C99A45;">
+        ❧ ✦ ❧
+      </div>
+
+      <h2>¿Vienes?</h2>
+
+      <p>
+        Por favor, confirma tu asistencia rellenando nuestro formulario.
+        Así podremos preparar todo con mucho cariño para este día tan especial.
+      </p>
+
+      <!-- CAMBIA ESTA URL POR LA DE TU FORMULARIO -->
+      <a
+        class="button"
+        href="https://docs.google.com/forms/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Ir al formulario
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PIE -->
+  <footer>
+
+    <p>Lucía & Carlos · 12.06.2027</p>
+
+    <p>Con todo nuestro cariño ❤️</p>
+
+  </footer>
+
+</body>
+</html>

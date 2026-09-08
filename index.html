@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Antonio y Natalia se casan el 28 de noviembre de 2026. Descubre todos los detalles de nuestra boda y confirma tu asistencia."
+  >
+
+  <meta name="theme-color" content="#234536">
+
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="Antonio & Natalia — Nuestra Boda"
+  >
+
+  <meta
+    property="og:description"
+    content="¡Nos casamos! Acompáñanos el 28 de noviembre de 2026."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:locale"
+    content="es_ES"
+  >
+
+  <title>Antonio & Natalia — Nuestra Boda</title>
+
+  <style>
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+      --verde-pino: #234536;
+      --verde-pino-oscuro: #192F25;
+      --verde-salvia: #71866B;
+      --verde-claro: #DDE5D8;
+      --rojo: #B83A3A;
+      --rojo-oscuro: #8E2929;
+      --crema: #F8F4EA;
+      --dorado: #C99A45;
+      --dorado-claro: #F1D49A;
+      --texto: #2E302B;
+      --blanco: #FFFFFF;
+
+      --sombra:
+        0 8px 25px rgba(35, 69, 54, .12);
+
+      --sombra-hover:
+        0 15px 35px rgba(35, 69, 54, .18);
+
+      --radio: 12px;
+      --max-width: 1100px;
+    }
+
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      color: var(--texto);
+      background: var(--crema);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =========================================================
+       PORTADA
+    ========================================================= */
+
+    .hero {
+      min-height: 100svh;
+
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 50px 20px 70px;
+
+      overflow: hidden;
+
+      color: var(--blanco);
+
+      /*
+        IMPORTANTE:
+        hero-boda.jpeg debe estar en la misma carpeta
+        que index.html.
+      */
+
+      background-color: var(--verde-pino);
+
+      background-image:
+        linear-gradient(
+          rgba(35, 69, 54, 0.72),
+          rgba(35, 69, 54, 0.72)
+        ),
+        url("./hero-boda.jpg");
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "✦";
+
+      position: absolute;
+
+      color: var(--dorado);
+
+      font-size: 3rem;
+
+      opacity: .75;
+
+      pointer-events: none;
+    }
+
+    .hero::before {
+      top: 35px;
+      left: 45px;
+    }
+
+    .hero::after {
+      bottom: 35px;
+      right: 45px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+
+      position: relative;
+
+      z-index: 1;
+
+      animation:
+        heroAppear 1.2s ease both;
+    }
+
+    .hero .small-title {
+      font-size: 1rem;
+
+      letter-spacing: 6px;
+
+      text-transform: uppercase;
+
+      color: var(--dorado-claro);
+
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size:
+        clamp(3.5rem, 11vw, 8rem);
+
+      font-weight: normal;
+
+      line-height: 1;
+
+      margin-bottom: 25px;
+    }
+
+    .hero .date {
+      font-size: 1.35rem;
+
+      letter-spacing: 4px;
+    }
+
+    .hero .verse {
+      margin: 30px auto 0;
+
+      max-width: 650px;
+
+      font-style: italic;
+
+      font-size: 1.1rem;
+    }
+
+    .hero .verse strong {
+      color: var(--dorado-claro);
+    }
+
+
+    /* =========================================================
+       BOTONES
+    ========================================================= */
+
+    .button {
+      display: inline-block;
+
+      margin-top: 35px;
+
+      padding: 15px 40px;
+
+      background: var(--rojo);
+
+      color: var(--blanco);
+
+      text-decoration: none;
+
+      border-radius: 30px;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 1rem;
+
+      letter-spacing: .5px;
+
+      transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+
+      box-shadow:
+        0 6px 18px rgba(0, 0, 0, .18);
+    }
+
+    .button:hover,
+    .button:focus {
+      background: var(--dorado);
+
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 10px 24px rgba(0, 0, 0, .22);
+    }
+
+    .button:active {
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================================================
+       SECCIONES
+    ========================================================= */
+
+    section {
+      max-width: var(--max-width);
+
+      margin: auto;
+
+      padding: 90px 25px;
+
+      text-align: center;
+    }
+
+    section h2 {
+      color: var(--verde-pino);
+
+      font-size:
+        clamp(2.2rem, 5vw, 2.8rem);
+
+      font-weight: normal;
+
+      margin-bottom: 25px;
+    }
+
+    section h2::after {
+      content: "";
+
+      display: block;
+
+      width: 60px;
+
+      height: 2px;
+
+      background: var(--rojo);
+
+      margin: 18px auto 0;
+    }
+
+    .intro {
+      max-width: 700px;
+
+      margin: auto;
+
+      font-size: 1.2rem;
+
+      color: #555b52;
+    }
+
+
+    /* =========================================================
+       ORNAMENTO
+    ========================================================= */
+
+    .ornament {
+      color: var(--rojo);
+
+      font-size: 1.5rem;
+
+      letter-spacing: 8px;
+
+      margin: 25px 0;
+    }
+
+
+    /* =========================================================
+       FECHA
+    ========================================================= */
+
+    .date-card {
+      max-width: 620px;
+
+      margin:
+        40px auto 60px;
+
+      padding: 32px;
+
+      background: var(--blanco);
+
+      border-top:
+        5px solid var(--rojo);
+
+      border-bottom:
+        1px solid #d8c49a;
+
+      box-shadow: var(--sombra);
+    }
+
+    .date-label {
+      display: block;
+
+      color: var(--verde-salvia);
+
+      font-family: Arial, sans-serif;
+
+      font-size: .85rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+      margin-bottom: 10px;
+    }
+
+    .big-date {
+      color: var(--verde-pino);
+
+      font-size:
+        clamp(2rem, 6vw, 3.2rem);
+
+      letter-spacing: 4px;
+    }
+
+    .date-card p {
+      color: #666;
+
+      margin-top: 5px;
+    }
+
+
+    /* =========================================================
+       CUENTA ATRÁS
+       DÍAS · HORAS · MINUTOS
+    ========================================================= */
+
+    .countdown {
+      max-width: 700px;
+
+      margin:
+        0 auto 60px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 15px;
+    }
+
+    .countdown-box {
+      padding: 20px 10px;
+
+      background:
+        rgba(255, 255, 255, .75);
+
+      border:
+        1px solid #ded8c8;
+
+      box-shadow:
+        0 5px 18px rgba(35, 69, 54, .06);
+    }
+
+    .countdown-number {
+      display: block;
+
+      color: var(--verde-pino);
+
+      font-size: 2rem;
+
+      line-height: 1.2;
+    }
+
+    .countdown-label {
+      color: var(--verde-salvia);
+
+      font-family: Arial, sans-serif;
+
+      font-size: .72rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+    }
+
+
+    /* =========================================================
+       LUGARES
+    ========================================================= */
+
+    .places {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 35px;
+    }
+
+    .place-card {
+      background: var(--blanco);
+
+      border-radius: var(--radio);
+
+      overflow: hidden;
+
+      box-shadow: var(--sombra);
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .place-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow: var(--sombra-hover);
+    }
+
+    .place-image {
+      width: 100%;
+
+      height: 270px;
+
+      overflow: hidden;
+
+      background: var(--verde-claro);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+    .place-image img {
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: contain;
+
+      display: block;
+
+      background: #f8f8f5;
+
+      transition:
+        transform .5s ease;
+    }
+
+    .place-card:hover .place-image img {
+      transform: scale(1);
+    }
+
+    .place-content {
+      padding:
+        30px 30px 35px;
+    }
+
+    .place-icon {
+      color: var(--dorado);
+
+      font-size: 1.4rem;
+
+      margin-bottom: 8px;
+    }
+
+    .place-content h3 {
+      color: var(--verde-pino);
+
+      font-size: 1.8rem;
+
+      font-weight: normal;
+
+      margin-bottom: 10px;
+    }
+
+    .place-name {
+      color: var(--rojo);
+
+      font-size: 1.15rem;
+
+      font-weight: bold;
+
+      margin-bottom: 4px;
+    }
+
+    .place-time {
+      color: var(--verde-salvia);
+
+      font-size: 1.1rem;
+
+      font-weight: bold;
+
+      margin-bottom: 4px;
+    }
+
+    .place-location {
+      color: var(--verde-pino);
+
+      font-size: 1rem;
+
+      font-weight: bold;
+
+      margin-bottom: 15px;
+    }
+
+    .place-description {
+      color: #666;
+
+      font-size: .98rem;
+
+      max-width: 450px;
+
+      margin: auto;
+    }
+
+    .place-button {
+      display: inline-block;
+
+      margin-top: 20px;
+
+      padding:
+        10px 22px;
+
+      border:
+        1px solid var(--verde-pino);
+
+      border-radius: 25px;
+
+      color: var(--verde-pino);
+
+      text-decoration: none;
+
+      font-family: Arial, sans-serif;
+
+      font-size: .85rem;
+
+      transition:
+        background .25s ease,
+        color .25s ease;
+    }
+
+    .place-button:hover,
+    .place-button:focus {
+      background: var(--verde-pino);
+
+      color: var(--blanco);
+    }
+
+
+    /* =========================================================
+       RSVP
+    ========================================================= */
+
+    .rsvp {
+      max-width: none;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--verde-pino),
+          #315B47
+        );
+
+      color: var(--blanco);
+    }
+
+    .rsvp-content {
+      max-width: 700px;
+
+      margin: auto;
+    }
+
+    .rsvp h2 {
+      color: var(--blanco);
+    }
+
+    .rsvp h2::after {
+      background: var(--dorado);
+    }
+
+    .rsvp p {
+      color: #F3F0E8;
+
+      font-size: 1.1rem;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding:
+        45px 20px;
+
+      text-align: center;
+
+      background:
+        var(--verde-pino-oscuro);
+
+      color: var(--blanco);
+    }
+
+    footer p:first-child {
+      color: var(--dorado-claro);
+
+      font-size: 1.1rem;
+
+      margin-bottom: 8px;
+    }
+
+    footer p:last-child {
+      opacity: .8;
+    }
+
+
+    /* =========================================================
+       ANIMACIONES
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(25px);
+
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+    @keyframes heroAppear {
+      from {
+        opacity: 0;
+
+        transform:
+          translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          translateY(0);
+      }
+    }
+
+
+    /* =========================================================
+       ACCESIBILIDAD
+    ========================================================= */
+
+    :focus-visible {
+      outline:
+        3px solid var(--dorado);
+
+      outline-offset: 4px;
+    }
+
+
+    /* =========================================================
+       MÓVIL
+    ========================================================= */
+
+    @media (max-width: 700px) {
+
+      .hero {
+        padding:
+          50px 20px 65px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+      }
+
+      .hero .small-title {
+        font-size: .8rem;
+
+        letter-spacing: 3px;
+      }
+
+      .hero .date {
+        font-size: 1.05rem;
+
+        letter-spacing: 2px;
+      }
+
+      .hero .verse {
+        font-size: 1rem;
+      }
+
+      .hero::before,
+      .hero::after {
+        font-size: 2rem;
+      }
+
+      section {
+        padding:
+          65px 20px;
+      }
+
+      .countdown {
+        grid-template-columns:
+          repeat(3, 1fr);
+
+        gap: 8px;
+      }
+
+      .countdown-box {
+        padding:
+          16px 5px;
+      }
+
+      .countdown-number {
+        font-size: 1.5rem;
+      }
+
+      .countdown-label {
+        font-size: .6rem;
+
+        letter-spacing: 1px;
+      }
+
+      .places {
+        grid-template-columns: 1fr;
+      }
+
+      .place-image {
+        height: 230px;
+      }
+
+      .place-content {
+        padding:
+          25px 20px 30px;
+      }
+
+      .button {
+        width: 100%;
+
+        max-width: 330px;
+
+        padding:
+          14px 25px;
+      }
+    }
+
+
+    /* =========================================================
+       REDUCCIÓN DE MOVIMIENTO
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       PORTADA
+  ======================================================== -->
+
+  <header
+    class="hero"
+    id="inicio"
+  >
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        Nos casamos
+      </div>
+
+      <h1>
+        Antonio &amp; Natalia
+      </h1>
+
+      <div class="date">
+        28 · Noviembre · 2026
+      </div>
+
+      <div class="verse">
+        “Tu bondad y tu misericordia me acompañan
+        todos los días de mi vida.”
+        <br>
+
+        <strong>
+          (Salmo 23, 6)
+        </strong>
+      </div>
+
+      <a
+        class="button"
+        href="https://forms.gle/wZW9RxuMaiVBR4R29"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Confirmar asistencia
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- =======================================================
+       INTRODUCCIÓN
+  ======================================================== -->
+
+  <section
+    class="reveal"
+    aria-labelledby="intro-title"
+  >
+
+    <div
+      class="ornament"
+      aria-hidden="true"
+    >
+      ❧ ✦ ❧
+    </div>
+
+    <h2 id="intro-title">
+      ¡Queremos celebrarlo contigo!
+    </h2>
+
+    <p class="intro">
+      Después de tantos momentos compartidos,
+      ha llegado el momento de dar un nuevo paso juntos.
+      Nos haría muchísima ilusión contar contigo
+      en este día tan especial.
+    </p>
+
+  </section>
+
+
+  <!-- =======================================================
+       EL GRAN DÍA
+  ======================================================== -->
+
+  <section
+    class="wedding-day reveal"
+    id="dia"
+    aria-labelledby="dia-title"
+  >
+
+    <h2 id="dia-title">
+      El gran día
+    </h2>
+
+
+    <!-- FECHA -->
+
+    <div class="date-card">
+
+      <span class="date-label">
+        Nuestra boda
+      </span>
+
+      <div class="big-date">
+        28 · 11 · 2026
+      </div>
+
+      <p>
+        Sábado, 28 de noviembre de 2026
+      </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         CUENTA ATRÁS
+    ====================================================== -->
+
+    <div
+      class="countdown"
+      aria-label="Cuenta atrás para nuestra boda"
+    >
+
+      <div class="countdown-box">
+
+        <span
+          class="countdown-number"
+          id="days"
+        >
+          0
+        </span>
+
+        <span class="countdown-label">
+          Días
+        </span>
+
+      </div>
+
+
+      <div class="countdown-box">
+
+        <span
+          class="countdown-number"
+          id="hours"
+        >
+          0
+        </span>
+
+        <span class="countdown-label">
+          Horas
+        </span>
+
+      </div>
+
+
+      <div class="countdown-box">
+
+        <span
+          class="countdown-number"
+          id="minutes"
+        >
+          0
+        </span>
+
+        <span class="countdown-label">
+          Minutos
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         LUGARES
+    ====================================================== -->
+
+    <div
+      class="places"
+      id="lugares"
+    >
+
+
+      <!-- CEREMONIA -->
+
+      <article class="place-card">
+
+        <div class="place-image">
+
+          <img
+            src="./iglesia.jpeg"
+            alt="Iglesia donde tendrá lugar la ceremonia"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="place-content">
+
+          <div
+            class="place-icon"
+            aria-hidden="true"
+          >
+            ✦
+          </div>
+
+          <h3>
+            La ceremonia
+          </h3>
+
+          <p class="place-name">
+            Parroquia de San Juan Bautista
+          </p>
+
+          <p class="place-time">
+            12:00 h
+          </p>
+
+          <p class="place-location">
+            Fuensalida
+          </p>
+
+          <p class="place-description">
+            Nos encontraremos aquí para compartir
+            uno de los momentos más especiales
+            de nuestro día.
+          </p>
+
+          <a
+            class="place-button"
+            href="https://maps.app.goo.gl/EebdKSyqDX7jgraW8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📍 Cómo llegar
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- CELEBRACIÓN -->
+
+      <article class="place-card">
+
+        <div class="place-image">
+
+          <img
+            src="./celebracion.jpg"
+            alt="Finca donde tendrá lugar la celebración"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="place-content">
+
+          <div
+            class="place-icon"
+            aria-hidden="true"
+          >
+            ✦
+          </div>
+
+          <h3>
+            La celebración
+          </h3>
+
+          <p class="place-name">
+            La Ventilla del Escribano
+          </p>
+
+          <p class="place-time">
+            14:00 h (aprox.)
+          </p>
+
+          <p class="place-location">
+            Maqueda
+          </p>
+
+          <p class="place-description">
+            Después de la ceremonia nos trasladaremos
+            a la finca para celebrar juntos,
+            brindar y disfrutar de la fiesta.
+          </p>
+
+          <a
+            class="place-button"
+            href="https://maps.app.goo.gl/qtDc7xoj2LrTzbV69"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📍 Cómo llegar
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       RSVP
+  ======================================================== -->
+
+  <section
+    class="rsvp"
+    id="rsvp"
+    aria-labelledby="rsvp-title"
+  >
+
+    <div class="rsvp-content">
+
+      <div
+        class="ornament"
+        style="color:#C99A45;"
+        aria-hidden="true"
+      >
+        ❧ ✦ ❧
+      </div>
+
+      <h2 id="rsvp-title">
+        ¿Vienes?
+      </h2>
+
+      <p>
+        Por favor, confirma tu asistencia rellenando
+        nuestro formulario.
+        Así podremos preparar todo con mucho cariño
+        para este día tan especial.
+      </p>
+
+      <a
+        class="button"
+        href="https://forms.gle/wZW9RxuMaiVBR4R29"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ir al formulario
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <p>
+      Antonio &amp; Natalia · 28.11.2026
+    </p>
+
+    <p>
+      Con todo nuestro cariño ❤️
+    </p>
+
+  </footer>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* ========================================================
+       CUENTA ATRÁS
+       DÍAS · HORAS · MINUTOS
+    ======================================================== */
+
+    const weddingDate =
+      new Date("2026-11-28T12:00:00");
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date();
+
+      const difference =
+        weddingDate.getTime() -
+        now.getTime();
+
+
+      /*
+        Cuando llega el día de la boda,
+        mostramos 0 en todos los campos.
+      */
+
+      if (difference <= 0) {
+
+        document.getElementById("days").textContent =
+          "0";
+
+        document.getElementById("hours").textContent =
+          "0";
+
+        document.getElementById("minutes").textContent =
+          "0";
+
+        return;
+      }
+
+
+      const second =
+        1000;
+
+      const minute =
+        second * 60;
+
+      const hour =
+        minute * 60;
+
+      const day =
+        hour * 24;
+
+
+      const days =
+        Math.floor(
+          difference / day
+        );
+
+
+      const hours =
+        Math.floor(
+          (difference % day) / hour
+        );
+
+
+      const minutes =
+        Math.floor(
+          (difference % hour) / minute
+        );
+
+
+      document.getElementById("days").textContent =
+        days;
+
+      document.getElementById("hours").textContent =
+        hours;
+
+      document.getElementById("minutes").textContent =
+        minutes;
+    }
+
+
+    updateCountdown();
+
+
+    /*
+      Actualizamos cada minuto.
+    */
+
+    setInterval(
+      updateCountdown,
+      60000
+    );
+
+
+    /* ========================================================
+       ANIMACIONES AL HACER SCROLL
+    ======================================================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(
+      (element) => {
+
+        observer.observe(
+          element
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
